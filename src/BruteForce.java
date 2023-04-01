@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class CaseCheckDuplication {
+public class BruteForce {
 
     public static void main(String[] args) {
 
@@ -16,7 +16,11 @@ public class CaseCheckDuplication {
 
     }
 
-    /* ----------------- brute force - tidak efisien but efektif ---------------- */
+    /* ----------------- Brute force - tidak efisien but efektif ---------------- */
+    // *- Sangat mudah diterapkan
+    // *- Tidak berarti buruk
+    // *- Langkah awal untuk mengoptimalkan program
+    // *- Time complexity O(N^2)
     /* --------------------------------- O(n^2) --------------------------------- */
     public static boolean checkDuplication1(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -29,6 +33,10 @@ public class CaseCheckDuplication {
     }
 
     /* ------------ Optimaze 1 - Pertukaran time dan space complexity ----------- */
+    // *- Extra space bisa mempercepat runtime
+    // *- menggunakan Hash table
+    // *- Time complexity O(N)
+    // *- Space complexity O(N)
     /* ---------------------------------- O(n) ---------------------------------- */
     public static boolean checkDuplication2(int[] arr) {
         // memory extra
@@ -44,6 +52,9 @@ public class CaseCheckDuplication {
     }
 
     /* --------------- Optimize 2 - Negoisasi dan kebutuhan proses -------------- */
+    // *- Bertanya kebutuhan dan batasan
+    // *- Menggunakan Sorting
+    // *- Time complexity O(N Log N)
     /* ------------------------------- O(N log N) ------------------------------- */
     public static boolean checkDuplication3(int[] arr) {
         Arrays.sort(arr);
